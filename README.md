@@ -2,6 +2,10 @@
 
 I decided to use Laravel 6 and MySql.
 
+First, get the project with
+
+`git clone https://github.com/fica990/jobs.git`
+
 I used a built-in server, start it with
 
 `php artisan serve`
@@ -26,10 +30,16 @@ MAIL_PORT=465
 MAIL_ENCRYPTION=ssl
 ```
 
-plus `MAIL_USERNAME` and `MAIL_PASSWORD`
+plus your `MAIL_USERNAME` and `MAIL_PASSWORD`
 
 ---
 
 class `JobOfferMailService` has a moderator email property (at the moment my email is set).
+
+---
+
+Home page is **/job-offers**
+
+Adding a new job offer is at **/job-offers/create**
 
 
