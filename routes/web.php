@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/job-offers', 'JobOfferController@index')->name('job-offers.index');
+Route::post('/job-offers', 'JobOfferController@store')->name('job-offers.store');
+
+Route::get('/job-offers/create', 'JobOfferController@create')->name('job-offers.create');
+
+Route::get('/job-offers/{id}/{status}', 'JobOfferController@manage')->name('job-offers.manage');
