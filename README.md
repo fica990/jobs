@@ -6,13 +6,15 @@ First, get the project with
 
 `git clone https://github.com/fica990/jobs.git`
 
-I used a built-in server, start it with
+Create **.env** based on **.env.example**
 
-`php artisan serve`
+Run composer
 
-I also created needed migrations, run them with
- 
-`php artisan migrate`
+`composer install`
+
+Run 
+
+`php artisan key:generate`
 
 ---
 
@@ -34,12 +36,30 @@ plus your `MAIL_USERNAME` and `MAIL_PASSWORD`
 
 ---
 
-class `JobOfferMailService` has a moderator email property (at the moment my email is set).
+Create your database.
+
+I created needed migrations, run them with
+ 
+`php artisan migrate`
+
+I used a built-in server, start it with
+
+`php artisan serve`
+
+---
+
+Also, start queue worker (for sending e-mails)
+
+`php artisan queue:work`
 
 ---
 
 Home page is **/job-offers**
 
 Adding a new job offer is at **/job-offers/create**
+
+---
+
+class `JobOfferMailService` has a moderator email property (at the moment my email is set).
 
 
